@@ -1,15 +1,17 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+#export ZSH="$HOME/.oh-my-zsh"
+export ZSH="/home/escor/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="nanotech"
-ZSH_THEME="gruvbox"
-SOLARIZED_THEME="dark"
+ZSH_THEME="nanotech"
+#ZSH_THEME="gruvbox"
+#ZSH_THEME="robbyrussell"
+#SOLARIZED_THEME="dark"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -65,6 +67,8 @@ SOLARIZED_THEME="dark"
 plugins=(
   git
   zsh-syntax-highlighting
+  zsh-autosuggestions
+  docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,20 +108,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
 
 # Android studio adb
-export PATH=$PATH:~/Library/Android/sdk/platform-tools/
+#export PATH=$PATH:~/Library/Android/sdk/platform-tools/
 
 if [ -f ~/.myenvs ]; then
-    source ~/.myenvs
+   source ~/.myenvs
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function openNvim {
   if [ $# -eq 0 ]; then
-    nvim ./
-  else
-    nvim $1
-  fi
+   nvim ./
+ else
+   nvim $1
+ fi
 }
 
 export FZF_DEFAULT_COMMAND='ag -g ""'
@@ -126,15 +130,15 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-export GIT_EDITOR=nvim
+export GIT_EDITOR=vim
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export JAVA_HOME=/usr/bin/java
+
+
+
+
+
+
